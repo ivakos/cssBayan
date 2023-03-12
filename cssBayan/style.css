@@ -9,6 +9,9 @@
 .accardion {
   margin: 0 auto;
   width: 50%;
+  background-color: rgba(128, 128, 128, 0.082);
+  padding: 0 1%;
+  border-radius: 1%;
 }
 
 .accardion:hover {
@@ -18,7 +21,7 @@
 .title {
   font-family: tahoma;
   color: rgba(0, 0, 0, 0.67);
-  margin: 1% 0;
+  padding: 1% 0;
   font-size: 200%;
 }
 
@@ -63,19 +66,14 @@
   transition: all 0.5s;
 }
 
-.bayan__input:checked ~ .bayan__body{
-  display: flex;
-  justify-content: center;
-}
-
-.bayan__input:checked~ .bayan__body>.bayan__figure{
+.bayan__input:checked+.bayan__label .bayan__figure {
   width: 40%;
   height: auto;
   transition: all 0.5s;
   padding: 1% 0;
 }
 
-.bayan__input:checked~ .bayan__body>.bayan__figure>.bayan__img{
+.bayan__input:checked+.bayan__label .bayan__img {
   width: 100%;
   height: auto;
   transition: all 0.5s;
@@ -102,6 +100,9 @@
   color: black;
 }
 
+
+
+
 .accardion:hover .label__text {
   color: black;
   transition: all 0.5s;
@@ -109,7 +110,7 @@
 
 /*--------------------------------PLUS */
 
-.icon__img{
+.icon__img {
   opacity: 0;
   width: 1.5rem;
   height: 1.5rem;
@@ -121,7 +122,7 @@
   transition: all 0.5s;
 }
 
-.bayan__input:checked+.bayan__label>.label__container>.label__icon>.icon__img {
+.bayan__input:checked+.bayan__label .icon__img {
   transform: rotate(45deg);
 }
 
@@ -139,20 +140,20 @@
     font-size: 190%;
   }
 
-  .bayan:hover .bayan__figure{
+  .bayan:hover .bayan__figure {
     width: 40%;
     height: auto;
     transition: all 0.5s;
     padding: 1% 0;
   }
 
-  .bayan:hover .bayan__img
-  {
+  .bayan:hover .bayan__img {
     width: 100%;
     height: auto;
     transition: all 0.5s;
   }
-  .bayan:hover .icon__img{
+
+  .bayan:hover .icon__img {
     transform: rotate(45deg);
   }
 }
@@ -170,10 +171,9 @@
     font-size: 140%;
   }
 
-  .bayan__input:checked~ .bayan__body>.bayan__figure{
+  .bayan__input:checked+.bayan__label .bayan__figure {
     width: 60%;
   }
-  
 
 }
 
@@ -190,9 +190,8 @@
     font-size: 120%;
   }
 
-  .bayan__input:checked~ .bayan__body>.bayan__figure{
+  .bayan__input:checked+.bayan__label .bayan__figure {
     width: 80%;
   }
-  
 
 }
