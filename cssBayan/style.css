@@ -85,6 +85,10 @@
   color: green;
 }
 
+.bayan__input:checked+.bayan__label {
+  color: black;
+}
+
 .label__container {
   color: inherit;
 }
@@ -96,20 +100,16 @@
   transition: all 0.5s;
 }
 
-.bayan__input:checked+.bayan__label {
-  color: black;
-}
-
-
-
-
 .accardion:hover .label__text {
   color: black;
   transition: all 0.5s;
 }
 
 /*--------------------------------PLUS */
-
+.label__icon{
+  display: flex;
+  align-items: center;
+}
 .icon__img {
   opacity: 0;
   width: 1.5rem;
@@ -125,7 +125,6 @@
 .bayan__input:checked+.bayan__label .icon__img {
   transform: rotate(45deg);
 }
-
 
 @media(max-width: 1921px) and (min-width: 822px) {
   .accardion {
