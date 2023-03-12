@@ -23,7 +23,6 @@
 }
 
 .line {
-  margin: 1% 0;
   border: 0.1rem solid rgba(0, 0, 0, 0.151);
 }
 
@@ -38,11 +37,6 @@
   display: none;
 }
 
-.bayan__input:checked~.bayan__body {
-  display: flex;
-  transition: all 0.5s;
-}
-
 /*--------------------------------label and body */
 
 .bayan__label:hover {
@@ -50,24 +44,41 @@
 }
 
 .bayan__body {
-  display: none;
+  display: flex;
   justify-content: center;
-  height: auto;
-  margin: 20px 0;
-  transition: all 0.5s;
 }
 
 /*--------------------------------image mem */
 
-figure {
-  width: 60%;
-  height: 60%;
+.bayan__figure {
+  width: 0;
+  height: auto;
+  transition: all 0.5s;
 }
 
-img {
-  width: 100%;
+.bayan__img {
+  width: 0;
   height: auto;
   object-fit: cover;
+  transition: all 0.5s;
+}
+
+.bayan__input:checked ~ .bayan__body{
+  display: flex;
+  justify-content: center;
+}
+
+.bayan__input:checked~ .bayan__body>.bayan__figure{
+  width: 40%;
+  height: auto;
+  transition: all 0.5s;
+  padding: 1% 0;
+}
+
+.bayan__input:checked~ .bayan__body>.bayan__figure>.bayan__img{
+  width: 100%;
+  height: auto;
+  transition: all 0.5s;
 }
 
 /*--------------------------------Change color hover accordion */
@@ -114,10 +125,6 @@ img {
   transform: rotate(45deg);
 }
 
-.bayan__label:hover~.bayan__body{
-  display: flex;
-}
-
 
 @media(max-width: 1921px) and (min-width: 822px) {
   .accardion {
@@ -132,11 +139,22 @@ img {
     font-size: 190%;
   }
 
-  figure {
-    width: 60%;
-    height: 60%;
+  .bayan:hover .bayan__figure{
+    width: 40%;
+    height: auto;
+    transition: all 0.5s;
+    padding: 1% 0;
   }
 
+  .bayan:hover .bayan__img
+  {
+    width: 100%;
+    height: auto;
+    transition: all 0.5s;
+  }
+  .bayan:hover .icon__img{
+    transform: rotate(45deg);
+  }
 }
 
 @media(max-width: 821px) and (min-width: 322px) {
@@ -152,10 +170,11 @@ img {
     font-size: 140%;
   }
 
-  figure {
-    width: 80%;
-    height: 80%;
+  .bayan__input:checked~ .bayan__body>.bayan__figure{
+    width: 60%;
   }
+  
+
 }
 
 @media(max-width: 321px) {
@@ -171,9 +190,9 @@ img {
     font-size: 120%;
   }
 
-  figure {
-    width: 90%;
-    height: 90%;
+  .bayan__input:checked~ .bayan__body>.bayan__figure{
+    width: 80%;
   }
+  
 
 }
