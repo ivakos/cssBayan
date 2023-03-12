@@ -4,9 +4,15 @@
   box-sizing: border-box;
 }
 
+/*--------------------------------COMMON */
+
 .accardion {
   margin: 0 auto;
   width: 50%;
+}
+
+.accardion:hover {
+  cursor: pointer;
 }
 
 .title {
@@ -26,15 +32,20 @@
   justify-content: space-between;
 }
 
+/*--------------------------------input */
+
 .bayan__input {
   display: none;
 }
 
 .bayan__input:checked~.bayan__body {
-  display: block;
+  display: flex;
+  justify-content: center;
   height: auto;
   transition: all 0.5s;
 }
+
+/*--------------------------------label and body */
 
 .bayan__label:hover {
   cursor: pointer;
@@ -43,12 +54,50 @@
 .bayan__body {
   display: none;
   height: 0;
+  margin: 20px 0;
+  transition: all 0.5s;
+}
+
+/*--------------------------------image mem */
+
+figure {
+  width: 60%;
+  height: 60%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.bayan__label {
+  color: green;
+}
+
+.label__container {
+  color: inherit;
+}
+
+.label__text {
+  font-family: tahoma;
+  font-size: 200%;
+  color: inherit;
+  transition: all 0.5s;
+}
+
+.bayan__input:checked+.bayan__label {
+  color: black;
+}
+
+.accardion:hover .label__text {
+  color: black;
   transition: all 0.5s;
 }
 
 
 
-@media(max-width: 1921px) {
+@media(max-width: 1921px) and (min-width: 822px) {
   .accardion {
     width: 60%;
   }
@@ -56,15 +105,34 @@
   .title {
     font-size: 200%;
   }
+
+  .label__text {
+    font-size: 190%;
+  }
+
+  figure {
+    width: 60%;
+    height: 60%;
+  }
+
 }
 
-@media(max-width: 821px) {
+@media(max-width: 821px) and (min-width: 322px) {
   .accardion {
     width: 70%;
   }
 
   .title {
     font-size: 170%;
+  }
+
+  .label__text {
+    font-size: 140%;
+  }
+
+  figure {
+    width: 80%;
+    height: 80%;
   }
 }
 
@@ -76,4 +144,14 @@
   .title {
     font-size: 150%;
   }
+
+  .label__text {
+    font-size: 120%;
+  }
+
+  figure {
+    width: 90%;
+    height: 90%;
+  }
+
 }
