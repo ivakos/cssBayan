@@ -66,37 +66,35 @@
   transition: all 0.5s;
 }
 
-.bayan__input:checked+.bayan__label .bayan__figure {
+.bayan__input:checked + .bayan__label .bayan__figure {
   width: 40%;
   height: auto;
   transition: all 0.5s;
   padding: 1% 0;
 }
 
-.bayan__input:checked+.bayan__label .bayan__img {
+.bayan__input:checked + .bayan__label .bayan__img {
   width: 100%;
   height: auto;
   transition: all 0.5s;
 }
 
+.bayan__label:active .bayan__img{
+  opacity: 0.7;
+}
+
+
+
 /*--------------------------------Change color hover accordion */
 
-.bayan__label {
-  color: green;
-}
-
-.bayan__input:checked+.bayan__label {
+.bayan__input:checked+.bayan__label .label__text{
   color: black;
-}
-
-.label__container {
-  color: inherit;
 }
 
 .label__text {
   font-family: tahoma;
   font-size: 200%;
-  color: inherit;
+  color: green;
   transition: all 0.5s;
 }
 
@@ -105,6 +103,9 @@
   transition: all 0.5s;
 }
 
+.bayan__label:active .label__text{
+  color: green;
+}
 /*--------------------------------PLUS */
 .label__icon{
   display: flex;
