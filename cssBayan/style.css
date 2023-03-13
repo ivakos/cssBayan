@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*--------------------------------COMMON */
+
+.accardion {
+  margin: 0 auto;
+  width: 50%;
+  background-color: rgba(128, 128, 128, 0.082);
+  padding: 0 1%;
+  border-radius: 1%;
+}
+
+.accardion:hover {
+  cursor: pointer;
+}
+
+.title {
+  font-family: tahoma;
+  color: rgba(0, 0, 0, 0.67);
+  padding: 1% 0;
+  font-size: 200%;
+}
+
+.line {
+  border: 0.1rem solid rgba(0, 0, 0, 0.151);
+}
+
+.label__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*--------------------------------input */
+
+.bayan__input {
+  display: none;
+}
+
+/*--------------------------------label and body */
+
+.bayan__label:hover {
+  cursor: pointer;
+}
+
+.bayan__body {
+  display: flex;
+  justify-content: center;
+}
+
+/*--------------------------------image mem */
+
+.bayan__figure {
+  width: 0;
+  height: auto;
+  transition: all 0.5s;
+}
+
+.bayan__img {
+  width: 0;
+  height: auto;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+
+.bayan__input:checked + .bayan__label .bayan__figure {
+  width: 40%;
+  height: auto;
+  transition: all 0.5s;
+  padding: 1% 0;
+}
+
+.bayan__input:checked + .bayan__label .bayan__img {
+  width: 100%;
+  height: auto;
+  transition: all 0.5s;
+}
+
+.bayan__label:active .bayan__img{
+  opacity: 0.7;
+}
+
+
+
+/*--------------------------------Change color hover accordion */
+
+.bayan__input:checked+.bayan__label .label__text{
+  color: black;
+}
+
+.label__text {
+  font-family: tahoma;
+  font-size: 200%;
+  color: green;
+  transition: all 0.5s;
+}
+
+.accardion:hover .label__text {
+  color: black;
+  transition: all 0.5s;
+}
+
+.bayan__label:active .label__text{
+  color: green;
+}
+/*--------------------------------PLUS */
+.label__icon{
+  display: flex;
+  align-items: center;
+}
+.icon__img {
+  opacity: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.5s;
+}
+
+.accardion:hover .icon__img {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.bayan__input:checked+.bayan__label .icon__img {
+  transform: rotate(45deg);
+}
+
+@media(max-width: 1921px) and (min-width: 822px) {
+  .accardion {
+    width: 60%;
+  }
+
+  .title {
+    font-size: 200%;
+  }
+
+  .label__text {
+    font-size: 190%;
+  }
+
+  .bayan:hover .bayan__figure {
+    width: 40%;
+    height: auto;
+    transition: all 0.5s;
+    padding: 1% 0;
+  }
+
+  .bayan:hover .bayan__img {
+    width: 100%;
+    height: auto;
+    transition: all 0.5s;
+  }
+
+  .bayan:hover .icon__img {
+    transform: rotate(45deg);
+  }
+}
+
+@media(max-width: 821px) and (min-width: 322px) {
+  .accardion {
+    width: 70%;
+  }
+
+  .title {
+    font-size: 170%;
+  }
+
+  .label__text {
+    font-size: 140%;
+  }
+
+  .bayan__input:checked+.bayan__label .bayan__figure {
+    width: 60%;
+  }
+
+}
+
+@media(max-width: 321px) {
+  .accardion {
+    width: 90%;
+  }
+
+  .title {
+    font-size: 150%;
+  }
+
+  .label__text {
+    font-size: 120%;
+  }
+
+  .bayan__input:checked+.bayan__label .bayan__figure {
+    width: 80%;
+  }
+
+}
